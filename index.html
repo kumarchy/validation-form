@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container" id="formContainer">
+        <h2>Hotel Registration Form</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+                <span class="error-message" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Enter your 10-digit phone number" required>
+                <span class="error-message" id="phoneError"></span>
+            </div>
+            <div class="form-group">
+                <label for="pincode">Pincode:</label>
+                <input type="text" id="pincode" placeholder="Enter your pincode" required>
+                <span class="error-message" id="pincodeError"></span>
+            </div>
+            <div class="form-group">
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" required>
+                <span class="error-message" id="checkinError"></span>
+            </div>
+            <div class="form-group">
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" required>
+                <span class="error-message" id="checkoutError"></span>
+            </div>
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" placeholder="Enter number of guests" required min="1">
+                <span class="error-message" id="guestsError"></span>
+            </div>
+            <div class="form-group">
+                <label for="room">Room Type:</label>
+                <select id="room" required>
+                    <option value="">Select room type</option>
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="suite">Suite</option>
+                </select>
+                <span class="error-message" id="roomError"></span>
+            </div>
+            <div class="form-group">
+                <label for="fileUpload">Upload ID Proof:</label>
+                <input type="file" id="fileUpload" required>
+                <span class="error-message" id="fileUploadError"></span>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Success message container -->
+    <div class="success-message" id="successMessage" style="display: none;">
+        <h2>Registration Successful!</h2>
+        <p>Thank you for registering. We look forward to welcoming you!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
